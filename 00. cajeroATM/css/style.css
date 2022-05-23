@@ -1,0 +1,37 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dogebank.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.btn-anc {
+    text-decoration: none;
+    color: white;
+    box-shadow: none; 
+}
+.btn-anc, a:link, a:visited,  a:hover, a:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+.inicio {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    align-items: center;
+    color: white;    
+}
+
+
+.alinear {
+    text-align: center;
+    align-items: center;
+}
+
+
+

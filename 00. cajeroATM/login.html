@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogeBank</title>
+
+    <!-- CASCADE STYLE SHEETS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> <!-- Boostrap -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- Hoja personalizada -->
+    <!--CASCADE STYLE SHEETS-->
+
+</head>
+<body>
+    
+  <!--JAVASCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script> <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> <!-- Boostrap JS -->
+    <script src="./js/script.js"></script> <!-- JS personalizado -->
+  <!-- /// -->
+
+    
+  <!-- DIVISIÓN PARA EL LOGIN -->
+    <div class="inicio" id="loginAccess">         
+      <br><br><br>
+      <form action="">
+          <h2>Iniciar sesión en tu cuenta</h2>
+          <br><br>
+          <label for="">No. Cuenta</label>
+          <input type="text" name="" id="account">
+          <label for="">NIP</label>
+          <input type="password" name="" id="pin">
+          
+          <div class="inicio">
+            <button type="button" class="btn btn-success" value="Ingresar" onclick="login()" >Aceptar</button>
+            <button type="button" class="btn btn-warning" disabled>Limpiar</button>
+            <button type="button" class="btn btn-danger"> <a class="btn-anc" onclick="logout()" href="./index.html">Cancelar</a></button>         
+          </div>          
+      </form>
+    </div>
+  <!-- /// -->
+
+  <!-- MENSAJE DE INICIO EN MENU -->    
+    <div class="inicio d-none" id="msgMenu">
+      <h2 id="saludo"></h1>
+    </div>
+  <!-- /// -->
+
+  <!-- MENU DE INTERACCION-->
+    <div class="inicio d-none" id="menu">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary" onclick="displaySaldo()">Consultar Saldo</button>
+        <button type="button" class="btn btn-secondary" onclick="displayDeposito()">Depositar</button>
+        <button type="button" class="btn btn-secondary" onclick="displayRetiro()">Retirar</button>
+      </div>
+
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary" disabled>Transferencias</button>
+        <button type="button" class="btn btn-secondary" disabled>Pagos</button>
+        <button type="button" class="btn btn-secondary" disabled>Otros</button>
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-success" disabled>Aceptar</button>
+      <button type="button" class="btn btn-warning" disabled>Limpiar</button>
+      <button type="button" class="btn btn-danger">
+        <a class="btn-anc" onclick="logout()" href="./index.html">Cancelar</a>
+      </button>
+
+    </div>
+  <!-- /// --> 
+
+         
+  <!-- APARTADO DE CONSULTA DE SALDO: DISPLAY NONE -->
+    <div class="inicio d-none" id="viewConsulta">
+      <div>
+        <h3>Tu saldo disponible es de:</h3>
+        <h3 id="saldo"></h3>
+      </div>
+      <div>
+        <button type="button" class="btn btn-success" onclick="regresar()"">Aceptar</button>
+        <button type="button" class="btn btn-warning" disabled>Limpiar</button>
+        <button type="button" class="btn btn-danger">
+          <a class="btn-anc" onclick="regresar()">Cancelar</a>
+      </button>
+      </div>
+    </div>
+  <!-- /// -->
+    
+  <!-- APARTADO DE DEPOSITO DE SALDO: DISPLAY NONE -->
+    <div class="inicio d-none" id="viewDeposito">
+      <div>
+        <h3>Ingrese el monto que desea depositar:</h3>
+        <input type="text" id="montoDeposito" />
+      </div>
+      <div>
+        <p class="fw-lighter" id="messageDeposito"></p>
+      </div>
+      <div>
+        <button type="button" class="btn btn-success" onclick="hacerDeposito()">Aceptar</button>
+        <button type="button" class="btn btn-warning" disabled>Limpiar</button>
+        <button type="button" class="btn btn-danger">
+          <a class="btn-anc" onclick="regresar()">Cancelar</a>
+        </button>
+      </div>
+    </div>
+  <!-- /// -->
+
+  <!-- APARTADO DE RETIRO DE SALDO: DISPLAY NONE -->
+  <div class="inicio d-none" id="viewRetiro">
+    <div>
+      <h3>Ingrese el monto a retirar:</h3>
+      <input type="text" id="montoRetiro" />
+    </div>
+    <div>
+      <p class="fw-lighter" id="messageRetiro"></p>
+    </div>
+    <div>
+      <button type="button" class="btn btn-success" onclick="hacerRetiro()">Aceptar</button>
+      <button type="button" class="btn btn-warning" disabled>Limpiar</button>
+      <button type="button" class="btn btn-danger">
+        <a class="btn-anc" onclick="regresar()">Cancelar</a>
+      </button>
+    </div>
+  </div>   
+  <!-- /// -->  
+  
+</body>
+</html>
